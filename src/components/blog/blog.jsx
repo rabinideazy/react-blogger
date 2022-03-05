@@ -25,6 +25,10 @@ export default class Blog extends Component {
     });
   }
 
+  onLogout() {
+    services.loggedOut();
+  }
+
   createMarkup(content) {
     return {__html: content};
   }
@@ -32,10 +36,12 @@ export default class Blog extends Component {
   render() {
     if( !this.state.loggedIn ) {
       window.location.href = '/';
+      return;
     }
 
     return (
-      <div>
+      <div className="main">
+        <p className="logout"><a href="#" onClick={this.onLogout.bind(this)}>Logout</a></p>
         {
           this.state.blogs.map((d,i) => {
             return (

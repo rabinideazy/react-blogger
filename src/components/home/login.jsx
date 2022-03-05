@@ -42,7 +42,7 @@ export default class Login extends Component {
 
     axios.post(`${Constants.endpoint}/user/login`, fields).then((res) => {
       services.setUserData( res.data );
-      //window.location.href = (res.data.user_role === 'customer') ? "/hall" : "/developer-dashboard";
+      window.location.href = '/blog';
     })
     .catch((error) => {
       let errMsg = error.response.data.data;
@@ -52,7 +52,7 @@ export default class Login extends Component {
   
   render() {
     return (
-      <div>
+      <div className="login">
         <form method="post" onSubmit={this.handleLoginFormSubmit.bind(this)}>
           <label htmlFor="userEmail">Email</label>
           <input type="email" id="userEmail" name="user_email" placeholder="Your Email.." onKeyUp={this.validateEmail.bind(this)} ref={this.emailRef} required />

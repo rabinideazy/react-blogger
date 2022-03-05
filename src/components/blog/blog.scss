@@ -1,0 +1,27 @@
+.blog {
+	display: flex;
+	margin: auto;
+  width: 60%;
+  background-color: #f2f2f2;
+  margin-bottom: 20px;
+
+	.blog-img {
+		float: left;
+		width: 30%;
+	}
+
+	.blog-content {
+		float: right;
+		width: 70%;
+		margin: auto;
+	}
+}
+
+.main {
+  border-radius: 5px;
+  padding: 40px;
+}
+
+.logout {
+	text-align: right;
+}

@@ -28,6 +28,7 @@ export default class Home extends Component {
   render() {
     if( this.state.loggedIn ) {
       window.location.href = '/blog';
+      return;
     }
 
     return (

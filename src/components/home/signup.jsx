@@ -66,7 +66,7 @@ export default class Signup extends Component {
   
   render() {
     return (
-      <div>
+      <div className="signup">
         <form method="post" onSubmit={this.handleSignupFormSubmit.bind(this)}>
           <label htmlFor="userName">Name</label>
           <input type="text" id="userName" name="user_name" placeholder="Your Name.." ref={this.nameRef} required />
